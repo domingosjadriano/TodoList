@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Meu App ToDo</title>
+	<link rel="stylesheet" type="text/css" href="css/estilo.css">
+	<script type="text/JavaScript" src="script.js"></script>
+</head>
+<body>
+
+
+	<div id="container">
+		<div class="App">
+			<h1><quote>Laureth's ToDo</h1>
+			<h2>Bem Vindo a Minha App</h2>
+			<p>Desfrute fazendo apontamentos para o seu dia!</p>
+
+			<ul id="loop"></ul>
+			<input type="" name="" placeholder="Digitar Novo ToDo">
+			<button onclick="adicionarTodo()">Adicionar</button>
+
+		</div><!--App-->
+		<h3>Todos os direitos reservados à Laureth Fernanda Salomão Caluluei</h3>
+	</div><!--container-->
+
+<script>
+var lista = document.querySelector(".App ul");
+var inputElement = document.querySelector(".App input");
+
+var todos = JSON.parse(localStorage.getItem('Lista_Todos'));
+
+function renderTodo(){
+	lista.innerHTML = "";
+	for(opcao of todos){
+		var newList = document.createElement("li");
+		var liText = document.createTextNode(opcao);
+		var apagar = document.createElement("a");
+		var apagarText = document.createTextNode("Apagar");
+
+		apagar.appendChild(apagarText);
+
+		newList.appendChild(liText);
+		newList.appendChild(apagar);
+		lista.appendChild(newList);
+
+		var position = todos.indexOf(opcao);
+		apagar.setAttribute("onclick", "apagarTodo("+position+")");
+	}
+}
+
+renderTodo();
+
+function adicionarTodo() {
+	var lista2 = inputElement.value;
+	todos.push(lista2);
+	inputElement.value = "";
+
+	document.querySelector(".App img").src = world.jpg;
+
+	renderTodo();
+	salvarTodo();
+}
+
+function apagarTodo(position){
+	todos.splice(position, 1);
+	renderTodo();
+	salvarTodo();
+}
+
+
+function salvarTodo() {
+	localStorage.setItem('Lista_Todos', JSON.stringify(todos));
+	renderTodo();
+}
+
+</script>
+
+
+
+
+</body>
+</html>

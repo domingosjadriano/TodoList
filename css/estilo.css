@@ -1,0 +1,75 @@
+#container{
+			padding: 3%;
+			background-color: #001739;
+			font-family: tahoma;
+		}
+		.App{
+			width: 80%;
+			max-width: 450px;
+			padding: 40px 8%;
+			border: 2px solid #ccc;
+			text-align: center;
+			border-radius: 10px;
+			margin: 20px auto;
+		}
+		.App h1{
+			width: 98%;
+			padding: 8px;
+			border-radius: 5px;
+			background-color: #E32639;
+			font-size: 42px;
+			color: rgb(200,200,200);
+		}
+		.App h2{
+			font-size: 24px;
+			color: white;
+		}
+		.App p{
+			font-size: 14px;
+			color: rgb(200, 200, 200);
+		}
+		.App ul{
+			padding: 20px;
+			font-size: 16px;
+		}
+		.App li{
+			color: white;
+			list-style: none;
+			margin-bottom: 10px;
+		}
+		.App a{
+			color: red;
+			cursor: pointer;
+			margin-left: 15px;
+			display: inline-block;
+		}
+		.App input{
+			width: 50%;
+			max-width: 300px;
+			font-size: 16px;
+			color: rgb(200, 200, 200);
+			padding: 8px;
+			border: 1px solid white;
+			border-radius: 5px;
+			color: white;
+			background-color: transparent;
+			display: block;
+			text-align: center;
+			margin: 10px auto;
+		}
+		.App button{
+			width: 30%;
+			max-width: 150px;
+			padding: 8px;
+			color: darkblue;
+			border: 1px solid white;
+			border-radius: 4px;
+			cursor: pointer;
+			font-size: 16px;
+		}
+		#container h3{
+			color: #ccc;
+			font-size: 12px;
+			margin-top: 20px; 
+			text-align: center;
+		}
